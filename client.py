@@ -15,7 +15,7 @@ sock.bind(('', 0))
 sock.sendto(f'{nickname} connected to chat'.encode('utf-8'), server)
 
 thread = threading.Thread(target=read_sock)     # Создает поток и запускает в нем функцию read_sock, чтобы прием
-thread.start()                                  # сообщений приходил по мере их отправки (в постоянном потоке)
+thread.start()                                  # сообщений производился по мере их отправки (в постоянном потоке)
 
 while True:
     message = input('Enter your message:\n')
