@@ -14,7 +14,7 @@ sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.bind(('', 0))
 sock.sendto(f'{nickname} connected to chat'.encode('utf-8'), server)
 
-thread = threading.Thread(target=read_sock)     # Создает потом и запускается в нем функция read_sock, чтобы прием
+thread = threading.Thread(target=read_sock)     # Создает поток и запускает в нем функцию read_sock, чтобы прием
 thread.start()                                  # сообщений приходил по мере их отправки (в постоянном потоке)
 
 while True:
