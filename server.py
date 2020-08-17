@@ -18,4 +18,3 @@ while True:
         if member == addr:      # Не отсылает сообщение самому автору
             continue
         sock.sendto(data, member)
-
